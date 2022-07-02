@@ -8,16 +8,20 @@ workspace "darkengine"
         "Release"
     }
 
+tdir = "bin/%{cfg.buildcfg}/%{prj.name}"
+odir = "bin-obj/%{cfg.buildcfg}/%{prj.name}"
 
     
 project "darkeditor"
     location "darkeditor"
-    kind "StaticLib"
+    kind "ConsoleApp"
     language "C++"
     cppdialect "C++17"
     staticruntime "on"
     systemversion "latest"
 
+    targetdir(tdir)
+    objdir(odir)
     
     files
     {
