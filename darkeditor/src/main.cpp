@@ -1,8 +1,13 @@
-#include <iostream>
+#include "darkengine/engine.h"
 
-int main(){
-    std::cout << "Hello" << std::endl;
-    system("pause");
+int main(int argc, char* argv){
 
-    return 0;
+    dengine::Engine& engine = dengine::Engine::Instance();
+    engine.Run();
+
+    std::cout << "Press ENTER to continue... ";
+    std::cin.ignore();
+
+   return 0;
+
 }
